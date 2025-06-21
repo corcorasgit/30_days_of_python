@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import datetime
 default_names = ["Justin", "John", "Emilee", "Jim", "Ron", "Sandra", "Veronica", "Whitney"]
 default_amounts = [123.32, 94.23, 124.32, 323.4, 23, 322.122323, 32.4, 99.99]
 
@@ -17,11 +18,13 @@ def make_messages(names, amounts):
     messages = []
     if len(names) == len(amounts):
         i = 0
+        today = datetime.datetime.today()
+        text = "{today.month}/{today.day}/{today.year}".format(today=today)
         for name in names:
             new_amount = "%.2f" %(amounts[i])
             new_msg = unf_message.format(
                     name=name,
-                    date="some date",
+                    date=text,
                     total =new_amount
                     )
             i += 1
