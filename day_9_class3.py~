@@ -4,7 +4,7 @@ import datetime
 class MessageUser():
     user_details =[]
     messages = []
-    base message = """Hi {name}!
+    base_message = """Hi {name}!
 
     Thank you for the purchase on {date}
     We hope you are exicted about using it. Just as a 
@@ -29,7 +29,7 @@ class MessageUser():
     def get_details(self):
         return self.user_details
     def make_messages(self):
-        if len(self.user_details > 0:
+        if len(self.user_details) > 0:
             for detail in self.get_details():
                name = detail["name"]
                amount = detail["amount"]

@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+from day_9_class3 import MessageUser
+
+obj = MessageUser()
+obj.add_user("justin", 123.32, email="hello@teamcfe.com")
+obj.add_user("john", 93.23)
+obj.add_user("shaun", 93.23)
+obj.add_user("rene", 99.99)
+obj.add_user("rod", 45.22)
+obj.add_user("mikeala", 56.22)
+obj.add_user("liam", 11.22)
+
+print(obj.make_messages())
+
